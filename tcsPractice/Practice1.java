@@ -256,6 +256,7 @@ INVALID OUTPUT!
 
         * */
 
+/*
         String c[]={"Espresso Coffee","Cappuccino Coffee","Latte Coffee"};
         String t[]={"Plain Tea","Assam Tea","Ginger Tea","Cardamom Tea","Masala Tea","Lemon Tea","Green Tea","Organic Darjeeling Tea"};
         String s[]={"Hot and Sour Soup","Veg Corn Soup","Tomato Soup","Spicy Tomato Soup"};
@@ -276,6 +277,309 @@ INVALID OUTPUT!
         if(res != "Invalid Input" )
             System.out.println("Welcome to CCD!\nEnjoy your "+res);
         else System.out.println(res);
+*/
 
+        /*
+        * A doctor has a clinic where he serves his patients. The doctor’s consultation fees are different for different groups of patients depending on their age. If the patient’s age is below 17, fees is 200 INR. If the patient’s age is between 17 and 40, fees is 400 INR. If patient’s age is above 40, fees is 300 INR. Write a code to calculate earnings in a day for which one array/List of values representing age of patients visited on that day is passed as input.
+
+Note:
+
+Age should not be zero or less than zero or above 120
+Doctor consults a maximum of 20 patients a day
+Enter age value (press Enter without a value to stop):
+Example 1:
+
+Input
+20
+30
+40
+50
+2
+3
+14
+Output
+Total Income 2000 INR
+
+        * */
+
+/*
+* To check whether a year is leap or not
+
+Step 1:
+
+We first divide the year by 4.
+If it is not divisible by 4 then it is not a leap year.
+If it is divisible by 4 leaving remainder 0
+Step 2:
+
+We divide the year by 100
+If it is not divisible by 100 then it is a leap year.
+If it is divisible by 100 leaving remainder 0
+Step 3:
+
+We divide the year by 400
+If it is not divisible by 400 then it is a leap year.
+If it is divisible by 400 leaving remainder 0
+Then it is a leap year
+
+
+
+C	C++	Java	Python	Perl
+/*Java program to check whether a year entered by user is a leap year or not and a leap year is a year
+which is completely divisible by 4,but the year should not be a century year except it is divisible by 400*/
+
+/*                Scanner sc=new Scanner(System.in);
+                System.out.println("Enter a Year");
+                int year = sc.nextInt();
+                if((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+                    System.out.println(year + " is a leap year.");
+                else
+                    System.out.println(year + " is not a leap year.");*/
+
+        /*
+        * Write a code to check whether no is prime or not. Condition use function check() to find whether entered no is positive or negative ,if negative then enter the no, And if yes pas no as a parameter to prime() and check whether no is prime or not?
+
+Whether the number is positive or not, if it is negative then print the message “please enter the positive number”
+It is positive then call the function prime and check whether the take positive number is prime or not.
+
+        * */
+
+        /*Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number to be checked : ");
+        int n = sc.nextInt();
+        Practice1 ob=new Practice1();
+        ob.check(n);
+    }
+    void check(int n) {
+        if(n<0)
+            System.out.println("Please enter a positive integer");
+        else
+            prime(n);
+    }
+    void prime(int n) {
+        int c=0;
+        for(int i=2;i<n;i++) {
+            if(n%i==0)
+                ++c;
+        }
+        if(c>=1)
+            System.out.println("Entered number is not a prime number");
+        else
+            System.out.println("Entered number is a prime number");
+*/
+
+        /*Consider the following series: 1, 1, 2, 3, 4, 9, 8, 27, 16, 81, 32, 243, 64, 729, 128, 2187 …
+
+This series is a mixture of 2 series – all the odd terms in this series form a geometric series and all the even terms form yet another geometric series. Write a program to find the Nth term in the series.
+
+The value N in a positive integer that should be read from STDIN. The Nth term that is calculated by the program should be written to STDOUT. Other than value of n th term,no other character / string or message should be written to STDOUT. For example , if N=16, the 16th term in the series is 2187, so only value 2187 should be printed to STDOUT.
+
+You can assume that N will not exceed 30.
+
+*/
+
+/*        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value of n : ");
+        int n = sc.nextInt();
+        int a = 1, b = 1;
+        if(n % 2 == 0) {
+            for(int i = 1 ; i <= (n-2) ; i = i+2) {
+                a = a * 2;
+                b = b * 3;
+            }
+            System.out.print(n+" element of the series is = "+b);
+        }
+        else {
+            for(int i = 1 ; i < (n-2) ; i = i+2) {
+                a = a * 2;
+                b = b * 3;
+            }
+            a = a * 2;
+            System.out.print(n+" element of the series is = "+a);
+        }*/
+
+        /*Consider the below series :
+
+0, 0, 2, 1, 4, 2, 6, 3, 8, 4, 10, 5, 12, 6, 14, 7, 16, 8
+
+This series is a mixture of 2 series all the odd terms in this series form even numbers in ascending order and every even terms is derived from the previous  term using the formula (x/2)
+
+Write a program to find the nth term in this series.
+
+The value n in a positive integer that should be read from STDIN the nth term that is calculated by the program should be written to STDOUT. Other than the value of the nth term no other characters /strings or message should be written to STDOUT.
+
+For example if n=10,the 10 th term in the series is to be derived from the 9th term in the series. The 9th term is 8 so the 10th term is (8/2)=4. Only the value 4 should be printed to STDOUT.
+
+You can assume that the n will not exceed 20,000.
+
+*/
+
+        /*Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int a = 0, b = 0;
+        if(n % 2 == 0) {
+            for(int i = 1 ; i <= (n-2) ; i = i+2) {
+                a = a + 2;
+                b = a / 2;
+            }
+            System.out.print(b);
+        }
+        else {
+            for(int i = 1 ; i < (n-2) ; i = i+2) {
+                a = a + 2;
+                b = a / 2;
+            }
+            a = a + 2;
+            System.out.print(a);
+        }*/
+
+
+/*        1. The program will recieve 3 English words inputs from STDIN
+
+        These three words will be read one at a time, in three separate line
+        The first word should be changed like all vowels should be replaced by %
+                The second word should be changed like all consonants should be replaced by #
+        The third word should be changed like all char should be converted to upper case
+                Then concatenate the three words and print them
+        Other than these concatenated word, no other characters/string should or message should be written to STDOUT
+
+        For example if you print how are you then output should be h%wa#eYOU.*/
+
+/*
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter three words : ");
+        String s1 = sc.next();
+        String s2 = sc.next();
+        String s3 = sc.next();
+        int l1 = s1.length();
+        int l2 = s2.length();
+        String str1 = "";
+        String str2 = "";
+        String str3 = "";
+        char c;
+        for(int i = 0 ; i < l1 ; i++) {
+            c = s1.charAt(i);
+            if(c == 'A' || c == 'a' || c == 'E' ||
+                    c == 'e' || c == 'I' || c == 'i' || c == 'O' || c == 'o' || c == 'U' || c == 'u')
+                str1 = str1 + "%";
+            else
+                str1 = str1 + c;
+        }
+        for(int i = 0 ; i < l2 ; i++) {
+            c = s2.charAt(i);
+            if((c >= 'A' && c <= 'Z')||(c >= 'a' && c <= 'z')) {
+                if(c == 'A' || c == 'a' || c == 'E' || c == 'e' ||
+                        c == 'I' || c == 'i' || c == 'O' || c == 'o' || c == 'U' || c == 'u')
+                    str2 = str2 + c;
+                else
+                    str2 = str2 + "#";
+            }
+            else
+                str2 = str2 + c;
+        }
+        str3 = s3.toUpperCase();
+        System.out.println(str1+str2+str3);
+*/
+
+/*Given a pair of positive integers m and n (m < n; 0 < m < 999; 1 < n < = 999), write a program to smartly affix zeroes, while printing the numbers from m to n.
+
+
+
+Example-1
+
+Input
+
+5 10
+
+Expected output
+
+05 06 07 08 09 10
+
+
+
+Example-2
+
+Input
+
+9 100
+
+Expected output
+
+009 010 011 012 013 014 015 016 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037 038 039 040 041 042 043 044 045 046 047 048 049 050 051 052 053 054 055 056 057 058 059 060 061 062 063 064 065 067 068 069 070 071 072 073 074 075 076 077 078 079 080 081 082 083 084 085 086 087 088 089 090 091 092 093 094 095 096 097 098 099 100
+
+
+
+Example-3
+
+Input
+
+1 9*/
+
+
+/*
+        Scanner sc = new Scanner(System.in);
+        int low=sc.nextInt();
+        int up=sc.nextInt();
+        for(int i=low;i<=up;i++)
+        {
+            if(up>=100)
+                System.out.printf("%03d ",i);
+            else if(up>=10)
+                System.out.printf("%02d ",i);
+            else
+                System.out.printf("%d ",i);
+        }
+*/
+
+/*
+        Given a maximum of 100 digit numbers as input, find the difference between the sum of odd and even position digits.
+                Input 1:
+        4567
+        Expected output:
+        2
+        Explanation
+        The Sum of odd position digits 4 and 6 is 10. The Sum of even position digits 5 and 7 is 12. The difference is 12-10=2.
+        Input #2:
+        9834698765123
+
+*/
+/*        Scanner sc = new Scanner(System.in);
+        String num = sc.nextLine();
+        int Osum=0,Esum=0;
+        for(int i=0;i<num.length();i++)
+        {
+            int n = (int)(num.charAt(i)-'0');
+            if(i%2==0)
+                Esum+=n;
+            else
+                Osum+=n;
+        }
+        System.out.println(Math.abs(Esum-Osum));*/
+
+        /*It was one of the places, where people need to get their provisions only through fair price (“ration”) shops. As the elder had domestic and official work to attend to, their wards were asked to buy the items from these shops. Needless to say, there was a long queue of boys and girls. To minimize the tedium of standing in the serpentine queue, the kids were given mints. I went to the last boy in the queue and asked him how many mints he has. He said that the number of mints he has is one less than the sum of all the mints of kids standing before him in the queue. So I went to the penultimate kid to know how many mints she has
+She said that if I add all the mints of kids before her and subtract one from it, the result equals the mints she has. It seemed to be a uniform response from everyone. So, I went to the boy at the head of the queue consoling myself that he would not give the same response as others. He said, “I have four mints”.
+Given the number of first kid’s mints (n) and the length (len) of the queue as input, write a program to display the total number of mints with all the kids.
+constraints:
+2<n<10
+1<len<20
+Input#1:
+4 2
+Output:
+7
+Input#2:
+14 4
+*/
+
+        Scanner sc = new Scanner(System.in);
+        int s = sc.nextInt();
+        int n = sc.nextInt();
+        int sum=s,prev;
+        for(int i=1;i<n;i++)
+        {
+            prev=sum-1;
+            System.out.println(prev);
+            sum+=prev;
+        }
+        System.out.println(sum);
     }
 }
